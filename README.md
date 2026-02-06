@@ -15,6 +15,8 @@ This system models that structured documentation impact workflow.
 
 ## System Architecture
 
+![System Architecture Diagram](architecture-diagram.png)
+
 The project follows a layered technical documentation lifecycle model:
 
 ### 1. Design Change Input Layer
