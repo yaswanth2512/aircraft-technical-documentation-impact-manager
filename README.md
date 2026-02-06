@@ -1,35 +1,116 @@
-# Aircraft Technical Documentation Impact & Configuration Manager
+Aircraft Technical Documentation Impact & Configuration Manager
+Overview
 
-## Overview
+This educational engineering project simulates how aircraft maintenance documentation
+(AMM, IPC, TSM) is assessed, revised, and validated when aircraft design changes
+occur during the aircraft operational lifecycle.
 
-This educational project simulates how aircraft maintenance documentation 
-(AMM, IPC, TSM) is assessed and updated when aircraft design changes occur.
+In real-world aviation programs, documentation must remain aligned with aircraft
+configuration, design evolution, and regulatory compliance requirements.
 
-## Features
+This system models that structured documentation impact workflow.
 
-- ATA chapter classification
-- Revision tracking
-- Configuration effectivity
-- Compliance traceability
-- Impact assessment workflow
+System Architecture
 
-## Project Structure
+The project follows a layered technical documentation lifecycle model:
 
-- models.py → Manual data model and revision control
-- impact_engine.py → ATA-based impact detection logic
-- compliance.py → ICA and configuration validation simulation
-- sample_data.py → Mock AMM/IPC/TSM dataset
-- main.py → CLI workflow
+Design Change Input Layer
+Accepts Service Bulletins (SB) and Modification Proposals (MOD).
 
-## How to Run
+Impact Assessment Engine
+Detects impacted manuals based on ATA chapter mapping.
 
-```bash
+Documentation Revision Control
+Simulates revision updates and effectivity tracking.
+
+Compliance & Configuration Validation
+Ensures ICA awareness and configuration applicability checks.
+
+Traceability Management
+Maintains linkage between design changes and documentation revisions.
+
+Engineering Context
+
+In aircraft Customer Services and Technical Data environments:
+
+Design changes affect specific ATA chapters.
+
+Published manuals must be reviewed and updated.
+
+Configuration effectivity must be verified.
+
+Compliance traceability must be maintained.
+
+ICA and quality standards (e.g., EASA/FAA awareness) must be respected.
+
+This project simulates a simplified version of that controlled documentation lifecycle process.
+
+Core Capabilities
+
+Manual modelling (AMM, IPC, TSM)
+
+ATA chapter structured indexing
+
+Design change ingestion (SB / MOD)
+
+Impact detection engine
+
+Revision increment simulation
+
+Configuration applicability validation
+
+Documentation traceability mapping
+
+ICA / Quality checklist awareness
+
+CLI-based engineering workflow demonstration
+
+Project Architecture
+Module	Responsibility
+models.py	Manual classes, revision tracking, effectivity modelling
+impact_engine.py	ATA-based impact assessment logic
+compliance.py	Configuration validation & ICA simulation
+sample_data.py	Mock AMM/IPC/TSM dataset
+main.py	CLI workflow orchestration
+Sample Workflow
 python main.py
-```
 
-Follow CLI prompts to submit a design change and observe documentation updates.
+Example Flow:
 
-## Educational Purpose
+Load available manuals
 
-This is a simplified academic simulation inspired by real aircraft technical 
-data lifecycle processes. It does not represent actual Airbus systems.
+Submit a Service Bulletin (SB) or Modification (MOD)
+
+Identify impacted ATA chapter
+
+Display affected manuals
+
+Trigger revision update simulation
+
+Validate compliance & configuration effectivity
+
+Educational Purpose
+
+This is a structured academic simulation inspired by real aircraft technical data
+management processes.
+
+It does not represent actual Airbus systems or proprietary documentation frameworks.
+
+Why This Project Matters
+
+This project demonstrates:
+
+Structured engineering mindset
+
+Understanding of aviation documentation lifecycle
+
+Configuration control awareness
+
+Traceability and compliance thinking
+
+Clean modular Python design
+
+Process-oriented systems development
+
+Designed as a student-built engineering simulation aligned with
+Aircraft Customer Services – Technical Data & Publications domain.
